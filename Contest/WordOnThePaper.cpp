@@ -1,6 +1,6 @@
- #include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-#define FILE freopen("input.txt", "r", stdin);freopen("output.txt", "w", stdout)
+// #define FILE freopen("input.txt", "r", stdin);freopen("output.txt", "w", stdout)
 #define FASTIO ios::sync_with_stdio(false);cin.tie(NULL)
 #define rep(i,a) for(int i = 0; i < a; i++)
 #define rep1(i,a) for(int i = 1; i <= a; i++)
@@ -24,22 +24,30 @@ const int N=1e5;
 
 void solve(){
     
-    ll n,m,a,x,y;
-    cin>>n>>m>>a;
-    if(n%a==0)x=n/a;// bag sesh nah thakle eta 
-    else x=n/a+1;// bag sesh thakle 1 add hobe tahole seta squre hobe
-    if(m%a==0) y=m/a;
-    else y=m/a+1;
-   cout(x*y);
+   char arr[8][8];
+    rep(i,8){
+        rep(j,8){
+            cin>>arr[i][j];
+            if(arr[i][j]>='a' && arr[i][j]<='z')
+                cout<<arr[i][j];
+        }
+    }
+    nl;
+   
      
     
 }
 
 int main() {
-      #ifndef ONLINE_JUDGE
-        FILE;
-    #endif
+    //   #ifndef ONLINE_JUDGE
+    //     FILE;
+    // #endif
     FASTIO;
-    solve();
+     ll t;
+    cin>>t;
+    while(t--){
+        solve();
+    }
+ //   solve();
     return 0;
 }

@@ -27,20 +27,14 @@ void solve(){
     cin>>n;
     rep(i,n){
      cin>>a>>b>>c;
+     cout<<max(0LL,max(b,c)+1-a)<<" "<<max(0LL,max(a,c)+1-b)<<" "<<max(0LL,max(a,b)+1-c)<<endl;
     }
-    rep(i,n){
-      //  cout<<max(0LL,max(a,b)+1-c)<<" "<<max(0LL,max(b,c)+1-a)<<" "<<max(0LL,max(c,a)+1-a)<<endl;
-       cout1(max(0LL,max(b,c)+1-a));
-       cout1(max(0LL,max(a,c)+1-b));
-       cout1(max(0LL,max(a,b)+1-c));
-       cout<<endl;
-    }
-  
-
 }
 
 int main() {
-    FILE;
+    #ifndef ONLINE_JUDGE
+        FILE;
+    #endif
     FASTIO;
     // ll t;
     // cin>>t;

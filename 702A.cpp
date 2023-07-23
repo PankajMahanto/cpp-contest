@@ -46,7 +46,9 @@ void solve(){
 }
 
 int main() {
-//FILE;
+    #ifndef ONLINE_JUDGE
+        FILE;
+    #endif
     FASTIO;
     // ll t; cin>>t;
     // while(t--){

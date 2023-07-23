@@ -35,37 +35,27 @@ const int N = 1e5;
 
 void solve()
 {
-    in cnt = 0, ans = 0;
-    string s;
-    cin >> s;
-    int n = s.length();
-    char first = 'a';
-    for (int i = 0; i < n; i++)
-    {
-        in c = abs(first - s[i]); // that find the next character index
-        // abs(s[i]-s[(i+1)%n])
-        // cout << "main value: ";
-        // cout(c);
-        ans += min(c, 26 - c);
-        // cout << "difference value: ";
-        // cout(ans);
 
-        first = s[i];
-    }
-    // cout << ans<<endl;
-    cout(ans);
+    ll a, b, c;
+    cin >> a >> b >> c;
+    if (a + b >= 10 || b + c >= 10 || c + a >= 10)
+        yes;
+    else
+        no;
 }
 
 int main()
 {
-        #ifndef ONLINE_JUDGE
-        FILE;
-    #endif
+#ifndef ONLINE_JUDGE
+    FILE;
+#endif
     FASTIO;
-     ll t;
-    cin>>t;
-    while(t--){
+    ll t;
+    cin >> t;
+    while (t--)
+    {
         solve();
     }
+   // solve();
     return 0;
 }
