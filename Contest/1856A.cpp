@@ -1,78 +1,77 @@
-#include <bits/stdc++.h>
+#include <bits/stdc++.h> // include all standard headers
 using namespace std;
-#define FASTIO ios::sync_with_stdio(false);cin.tie(NULL)
-#define rep(i, a) for (ll i = 0; i < a; i++)
-#define rep1(i, a) for (ll i = 1; i <= a; i++)
-#define vecin(i,a,v) rep(i,a){ll vx;cin>>vx;v.pb(vx);}
-#define vecout(i,a,v) rep(i,a){cout1(v[i]);}
-#define nl cout<<"\n"
-#define all(v) v.begin(),v.end()
-#define rall(v) v.rbegin(),v.rend()
-#define sz(x) (ll)x.size()
+#ifdef LOCAL
+#define eprintf(...)              \
+  {                               \
+    fprintf(stderr, __VA_ARGS__); \
+    fflush(stderr);               \
+  }
+#else
+#define eprintf(...) 42
+#endif
+#define ll long long
+#define lli long long int
+#define ld long double
+#define pii pair<int, int>
+// #define mp make_pair
 #define pb push_back
-#define ll long long int
-#define vi vector<ll>
-#define gcd __gcd
-#define lcm(a,b) (a*b)/gcd(a,b)
-const int N=1e5;
-//Problem name: A. Tales of a Sort
-void solve(){
-  ll n,cnt=0;
-  cin>>n;
-  vi v(n),u(n);
+#define eb emplace_back
+#define fi first
+#define se second
 
-
-  for(ll i=0;i<n;i++){
-    cin>>v[i];
-    u[i]=max(0LL,v[i]-1);
-  }
-  for(ll i=0;i<n;i++){
-    cout<<u[i]<<" ";
-  }nl;
-  nl;
-  sort(all(u));
-  rep(i,n){
-    if(u[i]>v[i])
-    cnt++;
-  }
-  cout<<cnt<<" ";
-  
-  
-
-
-
-//   sort(all(u));
-
-//   for(ll i=0;i<n;i++){
-//      if(u[i]<v[i]){
-//          ++cnt;
-//          break;
-//      }
-    
-//   }
-//    if(cnt==0)
-//   cout<<0<<" ";
-//   else
-//   cout<<u[n-(cnt+2)/2]<<" ";
-//   cout<<cnt; 
-//   if(cnt==n)
-//    cout<<0<<" ";
-//    else if(cnt==0)
-//    cout<<u[n-1]<<" ";
-//    else
-    // cout<<cnt<<" ";
+const int INF = 1e9;
+const ll INFLL = 1e18;
+const int MOD = 1e9 + 7;
+mt19937_64 rng(chrono::steady_clock::now().time_since_epoch().count());
+clock_t startTime;
+double getCurrentTime()
+{
+  return (double)(clock() - startTime) / CLOCKS_PER_SEC;
 }
-//3 2 0 7 1 1 0
+
+// Problem name: A. Tales of a Sort
+
+void solved()
+{
+
+  int n;
+  cin >> n;
+  vector<int> v(n);
+  for (auto &i : v)
+    cin >> i;
+
+  bool ok = is_sorted(v.begin(), v.end());
+  if (ok)
+  {
+    cout << 0 << "\n";
+    return;
+  }
+   int ans=0;
+   for(int i=1;i<n;i++){
+      if(v[i]<v[i-1]){
+        ans=max(ans,v[i-1]);
+      }
+   }
+  //  for(int i=0;i<n-1;i++){
+  //     if(v[i]>v[i+1]){
+  //       ans=max(ans,v[i]);
+  //     }
+  //  }
+     cout<<ans<<"\n";
+
+}
 int main()
 {
-    
-        FASTIO;
-     ll tc;
-    cin>>tc;
-    while(tc--){
-      solve();
-    }
+  startTime = clock();
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);cout.tie(NULL);
 
-        // solve();
-     return 0;
+  int tc; // number of test cases
+  cin >> tc;
+  for (int i = 1; i <= tc; i++)
+  {
+    solved();
+  }
+
+  return 0;
 }

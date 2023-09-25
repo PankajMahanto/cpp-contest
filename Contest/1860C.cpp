@@ -19,32 +19,25 @@ const int MOD = 1e9 + 7;
  
        int n,cnt=0;
        cin>>n;
-       vector<int>v(n),u(n);
+       vector<int>v(n);
+       for(auto &i:v)cin>>i;
+       int ans=0,win=n+1,los=n+1;
        for(int i=0;i<n;i++){
-           cin>>v[i];
-           u[i]=v[i];
+           if(v[i]<win){
+            win=v[i];
+           }else if(v[i]<los){
+             ans++;
+             los=v[i];
+           }
        }
-       
-    //    for(int i=0;i<n;i++){
-    //        cout<<v[i]<<" ";
-    //    }
-    //    cout<<"\n";
-       sort(v.rbegin(),v.rend());
-    //    for(int i=0;i<n;i++){
-    //        cout<<v[i]<<" ";
-    //    }
-    //    cout<<"\n";
-       for(int i=0;i<n;i++){
-           if(v[i]<u[i])
-           cnt++;
-       }
-       cout<<cnt<<"\n";
+       cout<<ans<<"\n";
     
   
 }
  
 int main(){
-        ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+        ios_base::sync_with_stdio(false);
+      //   cin.tie(NULL);cout.tie(NULL);
  
   
       int tc;  // number of test cases
@@ -56,3 +49,13 @@ int main(){
    
      return 0;
 }
+// 0
+// 1
+// 0
+// 1
+// 2
+// 1
+// 1
+// 1
+// 0
+// 1

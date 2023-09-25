@@ -28,6 +28,12 @@ void solve(){
      }
      if(cnt==ans){
         cout<<2;nl;
+        // substr function (start index,End intdex)
+        //ei 2 ta nia sob data ekhane add kore dibe just 
+        //jekhan theke suru korbo okhan theke kaj korbe
+        // jodi start index 0 and end index n-1 dei 
+        // tahole 0 to n-1 porjon data store korbe baki
+        // ekta nibe nah
         cout<<s.substr(0,n-1)<<" "<<s[n-1];       
         // cout<<s.substr(0,n-2)<<" "<<s.substr(n-3);       
      }

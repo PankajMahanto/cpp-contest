@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define FILE freopen("input.txt", "r", stdin);freopen("output.txt", "w", stdout)
+// #define FILE freopen("input.txt", "r", stdin);freopen("output.txt", "w", stdout)
 #define FASTIO ios::sync_with_stdio(false); cin.tie(NULL)
 #define rep(i, a) for (ll i = 0; i < a; i++)
 #define rep1(i, a) for (ll i = 1; i <= a; i++)
@@ -28,18 +28,15 @@ void solve()
 
     ll n,k,cnt = 0 ,temp=0,value;
     cin>>n>>k;
-    vi v(n),u(n);
+    vector<int>v(n);
 
-    rep(i,n){
+    for(int i=0;i<n;i++){
         cin>>v[i];
        
     }
-    rep(i,n){
-      if(v[i]!=0 && v[i]!=-1){
-         u[i] = v[i] - k;
-      } 
-    }
-    rep(i,n) {cout1(u[i]);}
+    sort(v.begin(),v.end());
+  
+    // rep(i,n) {cout1(u[i]);}
  nl;
 //  Input: 
 // 3
@@ -62,11 +59,11 @@ void solve()
 int main()
 {
 #ifndef ONLINE_JUDGE
-    FILE;
+    // FILE;
 #endif
     FASTIO;
-    ll t;
-    cin >> t;
+    ll t=1;
+    // cin >> t;
     while (t--)
     {
         solve();

@@ -28,33 +28,36 @@ const int N=1e5;
 //Game
 
 void solve(){
-  //  ll n,m;
-    string s;
+   ll n,m;
+   cin>>n>>m;
+   string s;
    cin>>s;
-   ll n=s.size();
+  //  ll n=s.size();
    vi v;
-   rep(i,n){
-    cout<<s[i]<<" :"<<s[i]-'0'<<endl;
-      // v.pb(s[i]-'0');
-   }
-   nl;
+  //  rep(i,n){
+  //   cout<<s[i]<<" :"<<s[i]-'0'<<endl;
+  //   cout<<s[i]<<" :"<<s[i]-'A'<<endl;
+  //     // v.pb(s[i]-'0');
+  //  }
+  //  nl;
    // 11010
 
-  //  ll f[26]={0};
-  //  for(auto i: s){
-  //      f[i-'A']++;
-  //      //cout(f[i-'A']);
-  //      cout<<i<<" "<<f[i-'A']<<" "<<endl;
-  //  }
-  //  nl;
-  //  ll ans=f[0];
-  //  cout(ans);
-  //  for(ll i=0;i<m;i++){
-  //     ans=min(ans,f[i]);
-  //    cout<<"ans:"<<ans<<" "<<"f[i]:"<<f[i];
-  //  }
-  //  nl;
-  //  cout1(ans*m);
+   ll f[26]={0};
+   for(auto i: s){
+       f[i-'A']++;
+       //cout(f[i-'A']);
+       cout<<i<<" "<<f[i-'A']<<" "<<endl;
+   }
+   nl;
+   ll ans=f[0];
+   cout(ans);
+   cout(f[1]);cout(f[3]);
+   for(ll i=0;i<m;i++){
+      ans=min(ans,f[i]);
+     cout<<" ans:"<<ans<<" "<<" f[i]:"<<f[i];
+   }
+   nl;
+   cout1(ans*m);
   // nl;
   
 }

@@ -33,17 +33,11 @@ void solve(){
   for(ll k=j+1;k<=n;k++)
    if(arr[i]=='Q'&& arr[j]=='A'&& arr[k]=='Q')
      cnt++;
-   cout<<cnt;nl;
+     cout<<cnt;nl;
 
 }
 
-/**
- * @brief description
- * @author Pankaj Mahanto (213902002) <aryanpankaj78@gmail.com>
- * @date 2023-08-04 (21:15)
- * 
- * @returns int
- */
+
 
 int main()
 {

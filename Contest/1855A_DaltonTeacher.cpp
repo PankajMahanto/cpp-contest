@@ -48,7 +48,7 @@ int main()
 // #ifndef ONLINE_JUDGE
 //     FILE;
 // #endif
-//     FASTIO;
+    FASTIO;
     ll t;
     cin >> t;
     while (t--)
